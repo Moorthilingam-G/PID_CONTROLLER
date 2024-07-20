@@ -1,0 +1,2 @@
+explorer_bot
+-DCATKIN_DEVEL_PREFIX=/home/moorthi/slam_ws/devel -DCMAKE_INSTALL_PREFIX=/home/moorthi/slam_ws/install -G Unix Makefiles

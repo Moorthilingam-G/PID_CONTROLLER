@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20240708-1542-Experimental"
+	Name="moorthi"
+	Generator="ctest-3.16.3"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="9.4.0"
+	OSName="Linux"
+	Hostname="moorthi"
+	OSRelease="5.4.0-187-generic"
+	OSVersion="#207-Ubuntu SMP Mon Jun 10 08:16:10 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="23"
+	ModelID="24"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="5928"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2394.89"
+	>
+	<Testing>
+		<StartDateTime>Jul 08 21:12 IST</StartDateTime>
+		<StartTestTime>1720453355</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jul 08 21:12 IST</EndDateTime>
+		<EndTestTime>1720453355</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

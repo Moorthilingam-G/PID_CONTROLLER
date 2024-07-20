@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="robot_description" textfile="$(find explorer_bot)/urdf/explorer_bot.urdf" />
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"  args="-param robot_description -urdf -model explorer_bot" />
+
+    <node name="Rsp" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+    <!-- <node name="Move_robot" pkg="explorer_bot" type="scripts/Move_robot.py" output="screen">
+        <param name="use_sim_time" value="true"/>
+        <rosparam param="cmd_vel_topic">/cmd_vel</rosparam>
+    </node> -->
+    <node pkg="explorer_bot" type="pid_controller.py" name="pid_controller" output="screen">
+        <param name="target_velocity" value="2.0" />
+        <param name="kp" value="1.0" />
+        <param name="ki" value="0.1" />
+        <param name="kd" value="0.01" />
+    </node>
+    <node pkg="rosbag" type="record" name="record_bag" output="screen" args="-O /home/moorthi/slam_ws/src/explorer_bot/bags/my_robot_bag.bag /cmd_vel /odom" /></launch>
