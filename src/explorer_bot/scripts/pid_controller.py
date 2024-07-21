@@ -40,7 +40,6 @@ class PIDController:
         derivative = error - self.previous_error
         output = self.kp * error + self.ki * self.integral + self.kd * derivative
 
-        # Saturate control signal
         output = max(min(output, self.max_velocity), -self.max_velocity)
 
         self.previous_error = error
@@ -63,9 +62,9 @@ class PIDController:
             target_velocity = self.compute_target_velocity()
             control_signal = self.compute_pid(target_velocity)
             
-            # Simulate robot movement
+ 
             self.current_velocity = control_signal
-            self.current_distance += self.current_velocity * 0.1  # Assuming control_rate is 10 Hz
+            self.current_distance += self.current_velocity * 0.1  
             
             twist_msg = Twist()
             twist_msg.linear.x = control_signal
